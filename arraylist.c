@@ -41,7 +41,7 @@ void* get(ArrayList * l, int i){
     return NULL;
   }
   if(i<0){
-    if(l->capacity=0){
+    if(l->capacity==0){
       return NULL;
     }
      return l->data[l->size+1]; 
