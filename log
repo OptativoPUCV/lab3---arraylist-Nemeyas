@@ -66,3 +66,47 @@ arraylist.c:35:7: error: ‘pop’ defined but not used [-Werror=unused-function
 cc1: all warnings being treated as errors
 Compilation failed
 b6838d7
+Thu 30 Mar 2023 11:23:39 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘push’:
+arraylist.c:25:43: error: passing argument 1 of ‘realloc’ makes pointer from integer without a cast [-Werror=int-conversion]
+   25 |     l->data =(void*) realloc(sizeof(void*)*l->capacity);
+      |                              ~~~~~~~~~~~~~^~~~~~~~~~~~
+      |                                           |
+      |                                           long unsigned int
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:551:29: note: expected ‘void *’ but argument is of type ‘long unsigned int’
+  551 | extern void *realloc (void *__ptr, size_t __size)
+      |                       ~~~~~~^~~~~
+In file included from test.c:5:
+arraylist.c:25:22: error: too few arguments to function ‘realloc’
+   25 |     l->data =(void*) realloc(sizeof(void*)*l->capacity);
+      |                      ^~~~~~~
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:551:14: note: declared here
+  551 | extern void *realloc (void *__ptr, size_t __size)
+      |              ^~~~~~~
+In file included from test.c:5:
+arraylist.c: In function ‘get’:
+arraylist.c:44:8: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   44 |     if(l->capacity=0){
+      |        ^
+arraylist.c: In function ‘push’:
+arraylist.c:50:12: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   50 |     return NULL;
+      |            ^~~~
+arraylist.c:21:6: note: declared here
+   21 | void push(ArrayList * l, void * data, int i){
+      |      ^~~~
+At top level:
+arraylist.c:39:7: error: ‘get’ defined but not used [-Werror=unused-function]
+   39 | void* get(ArrayList * l, int i){
+      |       ^~~
+arraylist.c:35:7: error: ‘pop’ defined but not used [-Werror=unused-function]
+   35 | void* pop(ArrayList * l, int i){
+      |       ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+de2afce
