@@ -169,3 +169,20 @@ arraylist.c:35:7: error: ‘pop’ defined but not used [-Werror=unused-function
 cc1: all warnings being treated as errors
 Compilation failed
 b881336
+Thu 30 Mar 2023 11:46:56 PM UTC: 
+ arraylist.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:5:
+arraylist.c:44:7: error: ‘get’ defined but not used [-Werror=unused-function]
+   44 | void* get(ArrayList * l, int i){
+      |       ^~~
+arraylist.c:39:7: error: ‘pop’ defined but not used [-Werror=unused-function]
+   39 | void* pop(ArrayList * l, int i){
+      |       ^~~
+test.c: In function ‘createList’:
+arraylist.c:15:45: error: ‘*lista.capacity’ is used uninitialized [-Werror=uninitialized]
+   15 |   lista->data = malloc(sizeof(void*) * lista->capacity);
+      |                                        ~~~~~^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e014797
