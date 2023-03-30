@@ -156,3 +156,16 @@ arraylist.c:35:7: error: ‘pop’ defined but not used [-Werror=unused-function
 cc1: all warnings being treated as errors
 Compilation failed
 5541c5d
+Thu 30 Mar 2023 11:24:58 PM UTC: 
+ arraylist.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:5:
+arraylist.c:39:7: error: ‘get’ defined but not used [-Werror=unused-function]
+   39 | void* get(ArrayList * l, int i){
+      |       ^~~
+arraylist.c:35:7: error: ‘pop’ defined but not used [-Werror=unused-function]
+   35 | void* pop(ArrayList * l, int i){
+      |       ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+b881336
