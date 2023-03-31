@@ -19,7 +19,6 @@ ArrayList *createList(void) {
 }
 
 void append(ArrayList * l, void * data){
-  l->data[l->size];
   if(l->capacity == l->size){ 
     l->capacity*=2;
     l->data =(void*) realloc(l->data, sizeof(void*)*l->capacity);
