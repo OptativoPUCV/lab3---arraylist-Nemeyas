@@ -502,3 +502,18 @@ arraylist.c:15:45: error: ‘*lista.capacity’ is used uninitialized [-Werror=u
 cc1: all warnings being treated as errors
 Compilation failed
 86ed8b5
+Fri 31 Mar 2023 12:14:15 AM UTC: 
+ arraylist.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:15:40: error: ‘l’ undeclared (first use in this function)
+   15 |   lista->data = malloc(sizeof(void*) * l->lista->capacity);
+      |                                        ^
+arraylist.c:15:40: note: each undeclared identifier is reported only once for each function it appears in
+arraylist.c: At top level:
+arraylist.c:46:1: error: expected identifier or ‘(’ before ‘}’ token
+   46 | }
+      | ^
+Compilation failed
+dc5f050

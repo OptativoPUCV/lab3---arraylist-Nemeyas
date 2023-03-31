@@ -12,7 +12,7 @@ typedef struct ArrayList {
 
 ArrayList *createList(void) {
   ArrayList *lista=malloc(sizeof(ArrayList));
-  lista->data = malloc(sizeof(void*) * lista->capacity);
+  lista->data = malloc(sizeof(void*) * l->lista->capacity);
   lista->size=0;
   lista->capacity=2;
   return NULL;
@@ -41,7 +41,6 @@ void push(ArrayList * l, void * data, int i){
 }
 
 void* pop(ArrayList * l, int i){
-  if(i>l->size){ 
     return NULL;
   }
 }
