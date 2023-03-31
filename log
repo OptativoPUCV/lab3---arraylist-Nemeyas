@@ -598,3 +598,9 @@ arraylist.c:49:7: error: unused variable ‘k’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 01f99cc
+Fri 31 Mar 2023 12:53:36 AM UTC: 
+ arraylist.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  16|0
+total_score: 70/70
+e894200
