@@ -610,3 +610,14 @@ Fri 31 Mar 2023 11:05:11 PM UTC:
  tests:  16|0
 total_score: 70/70
 01c7159
+Fri 31 Mar 2023 11:07:53 PM UTC: 
+ arraylist.c | 10 +++-------
+ 1 file changed, 3 insertions(+), 7 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘pop’:
+arraylist.c:49:7: error: unused variable ‘k’ [-Werror=unused-variable]
+   49 |   int k;
+      |       ^
+cc1: all warnings being treated as errors
+Compilation failed
+688472d
