@@ -526,3 +526,17 @@ arraylist.c:46:1: error: expected identifier or ‘(’ before ‘}’ token
       | ^
 Compilation failed
 f71313e
+Fri 31 Mar 2023 12:40:23 AM UTC: 
+ arraylist.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+In file included from test.c:5:
+arraylist.c: In function ‘pop’:
+arraylist.c:51:22: error: ‘data’ undeclared (first use in this function)
+   51 |         l->data[k]=l-data[k+1];
+      |                      ^~~~
+arraylist.c:51:22: note: each undeclared identifier is reported only once for each function it appears in
+arraylist.c:57:25: error: ‘j’ undeclared (first use in this function)
+   57 |   for(k=i; k<l->size-1; j++)
+      |                         ^
+Compilation failed
+03ff323
