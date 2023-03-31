@@ -353,3 +353,37 @@ arraylist.c:62:5: error: ‘get_size’ defined but not used [-Werror=unused-fun
 cc1: all warnings being treated as errors
 Compilation failed
 4428487
+Fri 31 Mar 2023 12:10:30 AM UTC: 
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:22:10: error: statement with no effect [-Werror=unused-value]
+   22 |   l->data[l->size];
+      |   ~~~~~~~^~~~~~~~~
+arraylist.c: In function ‘clean’:
+arraylist.c:70:10: error: assignment to ‘void **’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   70 |   l->data=2;
+      |          ^
+arraylist.c:71:56: error: expected expression before ‘)’ token
+   71 |   l->data =(void*) realloc(l->data, sizeof(l->capacity*)*l->capacity);
+      |                                                        ^
+test.c: In function ‘push’:
+test.c:411:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  411 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:434:1: error: expected declaration or statement at end of input
+  434 | }
+      | ^
+test.c:8:6: error: unused variable ‘msg’ [-Werror=unused-variable]
+    8 | char msg[300];
+      |      ^~~
+At top level:
+test.c:411:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  411 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+In file included from test.c:5:
+arraylist.c:62:5: error: ‘get_size’ defined but not used [-Werror=unused-function]
+   62 | int get_size(ArrayList * l){
+      |     ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+961e62e
